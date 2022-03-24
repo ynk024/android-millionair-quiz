@@ -1,0 +1,41 @@
+<resources>
+    <string name="app_name">My Quiz</string>
+    <string name="game_title">Android - Millionenquiz</string>
+    <string name="new_game">Neues Spiel</string>
+    <string name="stats">Bestenliste</string>
+    <string name="money_bag">Money Bag</string>
+    <string name="play_with_timelimit">Möchten Sie mit Zeitlimit spielen?</string>
+    <string name="play_with_risiko">Möchten Sie die Risikovariante spielen?</string>
+    <string name="start_game">Starte Spiel</string>
+    <string name="back">zurück</string>
+    <string name="what_is_your_name">Wie ist dein Name?</string>
+    <string name="end">Ende</string>
+    <string name="submit">Bestätigen</string>
+    <string name="placeholder">Placeholder</string>
+    <string name="win_sum">Gewinnsumme:</string>
+    <string name="share_text">Ich habe %1$d/%2$d Fragen beim Android - Millionenquiz richtig beantwortet und dabei %3$d € gewonnen!</string>
+    <string name="enter_score">Ergebnis speichern</string>
+    <string name="restart">Neustart</string>
+    <string name="back_to_menu">Zurück zum Menü</string>
+    <string name="hsbhv_info">Hochschule Bremerhaven - WP Programmierung mobiler Endgeräte SS20 \n Yannick Fölsing (Matrikelnr. 34953) - Artur Tierbach (Matrikelnr. 34824)</string>
+    <string name="risiko">Risiko</string>
+    <string name="time_limit">Zeitlimit</string>
+    <string name="saved_game">Das Ergebnis wurde gespeichert!</string>
+    <string name="solved_format">%1$d/%2$d</string>
+    <string name="cash_format">%d€</string>
+    <string name="share">Share</string>
+    <string name="nickname">Nickname</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="highscores">Highscores</string>
+    <string name="current_leader">Bester Spieler:</string>
+    <string name="title">Quizduell</string>
+    <string name="risiko_info">Tausche zweite Absicherung gegen Zusatzjoker</string>
+    <string name="next">Weiter</string>
+    <string name="leaderboard">"Bestenliste "</string>
+    <string name="nickname_hint">Gib einen Nicknamen ein um zu speichern.</string>
+    <string name="result">Ergebnis</string>
+    <string name="break_the_million">Knacke die Million!</string>
+    <string name="start">Start</string>
+    <string name="AppName">HSBHV - Quiz</string>
+</resources>

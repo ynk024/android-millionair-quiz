@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="game"
+            type="de.hsbhv.myquiz.database.Game" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/avatar_image"
+            android:layout_width="64dp"
+            android:layout_height="60dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:playerImage="@{game}"
+            tools:srcCompat="@drawable/avatar_1" />
+
+        <TextView
+            android:id="@+id/nickname_text"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toEndOf="@+id/avatar_image"
+            app:layout_constraintTop_toTopOf="@+id/avatar_image"
+            app:nicknameString="@{game}"
+            tools:text="Wednesday" />
+
+        <TextView
+            android:id="@+id/correct_answers_text"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            app:layout_constraintStart_toStartOf="@+id/nickname_text"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_text"
+            app:questionAnswersFormatted="@{game}"
+            tools:text="TextView" />
+
+        <TextView
+            android:id="@+id/won_cash_text"
+            android:layout_width="0dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            app:cashString="@{game}"
+            app:layout_constraintEnd_toStartOf="@+id/time_played_text"
+            app:layout_constraintStart_toEndOf="@+id/correct_answers_text"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_text" />
+
+        <TextView
+            android:id="@+id/time_played_text"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:text="TextView"
+            app:layout_constraintEnd_toEndOf="@+id/nickname_text"
+            app:layout_constraintTop_toBottomOf="@+id/nickname_text"
+            app:timePlayedFormatted="@{game}"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

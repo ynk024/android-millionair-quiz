@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="de.hsbhv.myquiz.HomeFragment"
+        tools:layout="@layout/fragment_home"
+        android:label="@string/start" >
+        <action
+            android:id="@+id/action_homeFragment_to_leaderBoardFragment"
+            app:destination="@id/leaderBoardFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="de.hsbhv.myquiz.game.GameFragment"
+        android:label="@string/break_the_million"
+        tools:layout="@layout/fragment_game" >
+        <action
+            android:id="@+id/action_gameFragment_to_scoreFragment"
+            app:destination="@id/scoreFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="isRisiko"
+            app:argType="boolean" />
+        <argument
+            android:name="hasTimeLimit"
+            app:argType="boolean" />
+    </fragment>
+    <fragment
+        android:id="@+id/scoreFragment"
+        android:name="de.hsbhv.myquiz.score.ScoreFragment"
+        android:label="@string/result"
+        tools:layout="@layout/fragment_score" >
+        <argument
+            android:name="wonCash"
+            app:argType="integer" />
+        <argument
+            android:name="isRisiko"
+            app:argType="boolean" />
+        <argument
+            android:name="hasTimeLimit"
+            app:argType="boolean" />
+        <argument android:name="correctAnswers"
+            app:argType="integer" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="timePlayed"
+            app:argType="long" />
+        <action
+            android:id="@+id/action_scoreFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/scoreFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_restart"
+            app:destination="@+id/gameFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left"
+            app:popUpTo="@+id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/leaderBoardFragment"
+        android:name="de.hsbhv.myquiz.leaderboard.LeaderBoardFragment"
+        android:label="@string/leaderboard"
+        tools:layout="@layout/fragment_leader_board" >
+        <action
+            android:id="@+id/action_leaderBoardFragment_to_homeFragment"
+            app:destination="@id/homeFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+
+</navigation>
